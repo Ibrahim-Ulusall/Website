@@ -1,0 +1,38 @@
+{% load static %}
+{% block content %}
+
+    <section id="container">
+
+        <!-- Info Section -->
+        <aside id="info-section">
+            <div class="imageBox">
+                <p><img src="{% static 'img/profile.png' %}" alt="profile"></p>
+                <h5>İbrahim ULUSAL & Seymen KÖK</h5>
+                <p>Bil. Güv. Öğr. - Bil. Prog. Öğr</p>
+                <button class="btn btn2">Takip Et</button>
+            </div>
+            <nav id="aside-menu">
+                <ul>
+                    <li><a href="#">Web Tasarım</a></li>
+                    <li><a href="#">Programlama</a></li>
+                    <li><a href="#">Github Projeler</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Giriş Yap</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Lesson Section -->
+        <section id="lesson-section">
+            <header class="lesson-header lesson-box">
+                <h1>
+                    Dersler
+                </h1>
+            </header>
+                {% for lesson in lessons %}
+                      {% include 'partials/_subcontainer.html' %}
+                {% endfor %}
+        </section>
+    </section>
+
+{% endblock %}

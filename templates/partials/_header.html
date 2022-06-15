@@ -1,0 +1,38 @@
+<header id="page-top">
+
+    <div id="logo">
+        <a href="#">Delta Software</a>
+    </div>
+    <input type="checkbox" id="toogle">
+    <label for="toogle" class="toogleLabel"><i class="fa-solid fa-bars"></i></label>
+    <nav id="menu">
+        <ul>
+            <li><a href="{% url 'home' %}" class="active">Anasayfa</a></li>
+            <li class="drop-li">
+                <a href="#">Programlama<i class="fa-solid fa-angle-up icon"></i></a>
+                <ul>
+                    <li><a href="#">C#</a></li>
+                    <li><a href="#">Php</a></li>
+                    <li><a href="#">Python</a></li>
+                </ul>
+            </li>
+            <li class="drop-li">
+                <a href="#">Web Tasarım
+                    <i class="fa-solid fa-angle-up icon"></i>
+                </a>
+                <ul>
+                    <li><a href="#">Html</a></li>
+                    <li><a href="#">Css</a></li>
+                    <li><a href="#">Bootstrap</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'home' %}">Blog</a></li>
+            <li><a href="#">İletişim</a></li>
+            <li><button class="btn">Giriş Yap</button></li>
+        </ul>
+        
+        
+    </nav>
+    
+
+</header>

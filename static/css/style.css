@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=My+Soul&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --shadow : rgba(0,0,0,.4);
+    --bg-color : rgb(0,89,227);
+    --font-color : rgb(101,160,225);
+    --border-color : rgb(232,231,231); 
+}
+
+body {
+    font-size:16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    background-color: var(--border-color);
+}
+
+#page-top{
+    padding:10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top:0;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+    z-index:100;
+}
+#logo{
+    flex:3;
+}
+#logo a{
+    font-size:1.2em;
+    color:#fff;
+    text-decoration: none;
+}
+#menu{
+    flex:9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:5px;
+}
+#menu ul {
+    list-style-type: none;
+}
+#menu ul li {
+    position: relative;
+    display: inline-block;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    color:#fff;
+    display: block;
+    font-size:1em;
+    padding:6px;
+    transition: .5s ease-in-out;
+    border-radius: 3px;
+}
+#menu ul li a:hover > .icon{
+    transition: .3s ease-in-out;
+    transform: rotate(180deg);
+    margin-bottom: 5px;
+}
+#menu ul li ul{
+    position: absolute;
+    left:0;
+    width: 100%;
+    display: none;
+    /* box-shadow: 0 0 5px rgba(0,0,0,.5); */
+}
+#menu ul li ul li{
+    width: 100%;
+    background-color: rgb(0,89,227);
+}
+#menu ul li ul li a{
+    color:#fff;
+    background-color:var(--bg-color);
+    display: block;
+    border-radius: 0;
+}
+#menu ul li a:hover{
+    color:#fff;
+    background-color: rgba(0,0,0, 0.1);
+    /* box-shadow: 0 3px 5px rgba(0,0,0,.5); */
+}
+#menu ul li:focus-within .icon{
+    transform: rotate(180deg);
+    margin-bottom: 5px;
+    transition: .3s ease-in-out;
+}
+#menu ul li:focus-within >ul,
+#menu ul li:hover > ul{
+    display: initial;
+}
+.icon{
+    vertical-align: middle;
+    margin-left:5px;
+}
+
+#toogle{
+    display: none;
+}
+.toogleLabel{
+    color:#fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+}
+.btn{
+    background:none;
+    color:#fff;
+    padding:7px 10px;
+    font-size:1em;
+    font-family: 'Poppins',sans-serif;
+    cursor:pointer;
+    border:none;
+    border-radius: 3px;
+    transition : .5s ease-in-out;
+}
+.btn:hover {
+    background-color: rgb(0,69,219);
+}
+
+/* Container Section */
+#container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(248, 249, 250);
+}
+#info-section{
+    flex:3;
+    margin:5px 30px;
+}
+#lesson-section{
+    flex:9;
+    margin-left:30px;
+    background-color: rgb(248,249,250);
+    padding:10px 30px;
+}
+.imageBox{
+    background-color: #fff;
+    padding:10px 20px;
+    margin-bottom:20px;
+    border-radius: 3px;
+    border:1px solid rgb(232, 231, 231);
+    color:rgba(32, 32, 32, 0.801);
+}
+.imageBox h5{
+    margin:5px;
+    font-size: .90em;
+    text-align: center;
+}
+.imageBox p{
+    color:rgb(177, 177, 177);
+    font-size:.75em;
+    text-align: center;
+}
+.btn2{
+    background-color: #fff;
+    color:#fff;
+    font-size:.80em;
+    display: block;
+    margin:10px auto;
+    background-color: var(--bg-color);
+    width: 50%;
+}
+#aside-menu{
+    border:1px solid rgb(232,231,231);
+    background-color: #fff;
+    border-radius: 3px;
+}
+#aside-menu ul{
+    list-style-type: none;
+}
+#aside-menu ul li {
+    border-bottom:0.01em solid rgb(232, 231, 231);
+}
+#aside-menu ul li a{
+    transition: .5s ease-in-out;
+    color:rgba(32, 32, 32, 0.801);
+    display: block;
+    width: 100%;
+    padding:10px;
+    text-decoration: none;
+}
+#aside-menu ul li a:hover{
+    background-color: rgba(232, 231, 231, 0.678);
+}
+.lesson-box{
+    position: relative;
+    padding:10px;
+    display: flex;
+    /* justify-content: space-between; */
+    border-radius: 5px;
+    border:1px solid rgb(232,231,231);
+    background-color: #fff;
+    margin-bottom:20px;
+}
+.Lbox{
+    margin:0 20px;
+}
+.lesson-box-top{
+    display: flex;
+}
+.lesson-box-right{
+    flex:6;
+}
+.lesson-box-left{
+    flex:3;
+}
+.Lbox h4 {
+    margin-bottom: 10px;
+}
+.Lbox h4 a{
+    font-size: 1.1em;
+    color:rgba(32, 32, 32, 0.801);
+    font-weight: bold;
+    text-decoration: none;
+}
+.Lbox p{
+    color:rgba(32, 32, 32, 0.801);
+    font-size:0.90em;
+}
+.Lbox-2{
+    flex:3;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.buton{
+    float:right;
+    margin:10px;
+    font-family: 'Poppins',sans-serif;
+    padding:7px 16px;
+    border-radius: 3px;
+    cursor:pointer;
+    background: none;
+    font-size:0.85em;
+    border:none;
+    color:#fff;
+    box-shadow:0 0 3px rgba(0,0,0, .7);
+    background-color: var(--bg-color);
+    transition: .5s all;
+    display: block;
+}
+.buton:hover{
+    background-color: rgb(0, 73, 184);
+}
+/* Footer Section */
+
+#footer{
+    background-color: rgba(248, 249, 250, 0.877);
+    padding:7px;
+    box-shadow: 0 0 1px rgba(0,0,0, 0.5);
+    color:rgba(32, 32, 32, 0.801);
+}
+#footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    align-items: center;
+}
+.left,.center,.right{
+    flex:4;
+    padding:10px 20px;
+}
+#footer h3{
+    font-size:1em;
+    font-weight: normal;
+    position: relative;
+    margin-bottom:5px;
+}
+#footer-top .fbox ul {
+    color:rgba(32, 32, 32, 0.801);
+    list-style-type: square;
+}
+#footer-top .fbox ul li a{
+    color:rgba(32, 32, 32, 0.801);
+    font-size: .85em;
+    text-decoration: none;
+}
+#footer-bottom p{
+    font-size:.85em;
+    text-align: center;
+}
+@media (max-width:1070px) {
+    #menu {
+        min-height: 100vh;
+        position: absolute;
+        top:100%;
+        left:0;
+        right: 0;
+        justify-content: flex-start;
+        background-color: rgb(13,23,33);
+        display: none;
+    }
+    .btn{
+        display: none;
+        width: 100%;
+        background-color: rgb(0,89,227);
+    }
+    #menu ul{
+        width: 100%;
+    }
+    #menu ul li {
+        width: 100%;
+    }
+    #menu ul li a{
+        color:#fff;
+    }
+    #menu ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    .toogleLabel{
+        display: initial;
+    }
+    #toogle:checked ~ #menu,.btn{
+        display: initial;
+    }
+    /* Responsive Content */
+    #container{
+        flex-direction: column;
+    }
+    #lesson-section{
+        margin:0px;
+    }
+    
+    .lesson-box,.lesson-box-top{
+        flex-direction: column;
+    }
+    .Lbox{
+        padding:0;
+    }
+    /* Responsive footer */
+    #footer-top{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .fbox{
+        width: 100%;
+        border-bottom:1px solid rgb(232,231,231);
+    }
+}
+
+@media (max-width:645px) {
+    .Lbox img{
+        display: block;
+        margin:5px auto;
+    }
+    .Lbox h4{
+        text-align: center;
+    }
+    .Lbox p{
+        text-align: center;
+    }
+    .buton{
+        width:100%;
+    }
+}

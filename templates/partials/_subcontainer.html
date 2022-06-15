@@ -1,0 +1,20 @@
+{% load static %}
+
+<section class="lesson-box">
+    <div class="lesson-box-top">
+        <div class="lesson-box-left Lbox">
+            <img src="{% static 'img/'|add:lesson.image %}" alt="profile" width="125">
+        </div>
+        <div class="lesson-box-right Lbox">
+            <h4><a href="#">
+                {{ lesson.title }}
+            </a></h4>
+            <p>
+                {{ lesson.description }}
+            </p>
+        </div>
+    </div>
+    <div class="Lbox Lbox-2">
+        <button class="buton">Derse başla</button>
+    </div>
+</section>
